@@ -1,0 +1,6 @@
+<p>
+  panel works!
+</p>
+
+<app-login (SelectUser)="onSelectUser($event)" [users]="users"></app-login>
+<app-users *ngIf="selectedUser" [user]="selectedUser"></app-users>
