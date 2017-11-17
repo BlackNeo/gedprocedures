@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, OnChanges } from '@angular/core';
 import { Users } from '../users';
 
 @Component({
@@ -6,19 +6,20 @@ import { Users } from '../users';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnChanges {
 
-
-  @Input() users: Users;
-  @Output() SelectUser = new EventEmitter<any>();
-
+  private signIn = false;
+  @Input() user: Users;
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSelect(user: Users) {
-    this.SelectUser.emit(user);
+  ngOnChanges() {
+    this.signIn = false;
   }
 
+  onsignIn() {
+    this.signIn = true;
+  }
 }

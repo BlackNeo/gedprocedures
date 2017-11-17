@@ -1,19 +1,26 @@
+{{user.username}}
+{{user.password}}
 
-
-<ul class="nav nav-pills nav-stacked">
-  <li (click)="onSelect(user)" *ngFor="let user of users"><a>{{user.username}}</a></li>
-</ul>
-
-<div class="wrapper">
+<div *ngIf="signIn" class="wrapper">
   <form class="form-signin">       
-    <h2 class="form-signin-heading">Connectez-vous</h2>
-    <input type="text" class="form-control" name="username" placeholder="Pseudo" required="" autofocus="" />
-    <input type="password" class="form-control" name="password" placeholder="Mot de passe" required=""/>      
+    <h2 class="form-signin-heading">Connectez-vous !</h2>
+    <input type="text" class="form-control" [(ngModel)]="user.username" name="username" placeholder="Pseudo" required="" autofocus="" />
+    <input type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="Mot de passe" required=""/>      
     <a href="#">Mot de passe oublié</a>
     <label class="checkbox">
       <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
     </label>
-    <button class="btn btn-lg btn-primary btn-block" type="button">Login</button>   
+    <button class="btn btn-lg btn-primary btn-block" type="submitt">Login</button>   
+  </form>
+</div>
+
+<div *ngIf="!signIn" (click)="onsignIn()" class="wrapper">
+  <form class="form-signin">       
+    <h2 class="form-signin-heading">Inscrivez-vous !</h2>
+    <input type="text" class="form-control" [(ngModel)]="user.username" name="username" placeholder="Pseudo" required="" autofocus="" />
+    <input type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="Mot de passe" required=""/>
+    <input type="password-repeat" class="form-control" [(ngModel)]="user.password" name="password-repeat" placeholder="Vérifiez le mot de passe" required=""/>
+    <button class="btn btn-lg btn-primary btn-block" type="submitt">Login</button>   
   </form>
 </div>
 

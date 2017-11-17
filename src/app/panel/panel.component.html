@@ -2,5 +2,5 @@
   panel works!
 </p>
 
-<app-login (SelectUser)="onSelectUser($event)" [users]="users"></app-login>
-<app-users *ngIf="selectedUser" [user]="selectedUser"></app-users>
+<app-login *ngIf="selectedUser" [user]="selectedUser" ></app-login>
+<app-users (SelectUser)="onSelectUser($event)" [users]="users" ></app-users>

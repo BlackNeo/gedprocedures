@@ -1,5 +1,5 @@
-{{user.username}}
-{{user.password}}
-
-
+<ul class="nav nav-pills nav-stacked">
+    <li (click)="onSelect(user)" *ngFor="let user of users"><a>{{user.username}}</a></li>
+</ul>
+      
   
