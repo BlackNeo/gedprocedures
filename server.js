@@ -1,24 +1,34 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
 
-const api = require('./server/routes/api');
+var api = require('./server/routes/api');
 
-const port = 3000;
+var portDev = 3000;
+var portProd = 3000;
 
-const app = express();
+
+var app = express();
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.use('/api', api);
 
-app.get('*', (req, res) => {
+app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-app.listen(port, function() {
-    console.log("Server running on localhost :" + port);
-});
+if (app.get('env') === 'development')
+{
+
+    app.listen(port, function() {
+        console.log("Server running on localhost :" + portDev);
+    });
+} else {
+    app.listen(8080, function () {
+        console.log("Server running on localhost :" + portProd);
+        });
+}
