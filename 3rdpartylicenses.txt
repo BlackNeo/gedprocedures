@@ -71,6 +71,10 @@ THE SOFTWARE.
 MIT
 MIT
 
+ts-md5@1.2.2
+MIT
+MIT
+
 bootstrap@4.0.0-beta.2
 MIT
 The MIT License (MIT)
