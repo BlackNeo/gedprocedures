@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.use('/api', api);
+app.use('/api', express.static('api'));
 
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
@@ -23,12 +23,11 @@ app.get('/*', function (req, res) {
 
 if (app.get('env') === 'development')
 {
-
-    app.listen(port, function() {
+    app.listen(portDev, function() {
         console.log("Server running on localhost :" + portDev);
     });
 } else {
-    app.listen(8080, function () {
+    app.listen(portProd, function () {
         console.log("Server running on localhost :" + portProd);
         });
 }
