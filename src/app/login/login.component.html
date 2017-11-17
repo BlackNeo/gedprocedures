@@ -1,5 +1,13 @@
 {{user.username}}
-{{user.password}}
+
+<div class="wrapper">
+  <form class="form-signin">       
+    <h2 class="form-signin-heading">Bienvenue</h2>
+    <input type="text" class="form-control" name="username" [value]="user.username" />
+    <input type="password" class="form-control" name="passsword" [value]="user.password | toMd5"/>
+  </form>
+</div>
+
 
 <div *ngIf="signIn" class="wrapper">
   <form class="form-signin">       
@@ -10,7 +18,7 @@
     <label class="checkbox">
       <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
     </label>
-    <button class="btn btn-lg btn-primary btn-block" type="submitt">Login</button>   
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
   </form>
 </div>
 
@@ -20,7 +28,7 @@
     <input type="text" class="form-control" [(ngModel)]="user.username" name="username" placeholder="Pseudo" required="" autofocus="" />
     <input type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="Mot de passe" required=""/>
     <input type="password-repeat" class="form-control" [(ngModel)]="user.password" name="password-repeat" placeholder="Vérifiez le mot de passe" required=""/>
-    <button class="btn btn-lg btn-primary btn-block" type="submitt">Login</button>   
+    <button class="btn btn-lg btn-primary btn-block" type="submt">Login</button>   
   </form>
 </div>
 

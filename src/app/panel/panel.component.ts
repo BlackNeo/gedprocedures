@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { Users } from '../users';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.css']
+  styleUrls: ['./panel.component.css'],
+  providers: [UsersService]
 })
 export class PanelComponent implements OnInit {
 
-  users: Users [] = [
-    {'_id': '00001', 'username': 'zerosum1', 'password': '12341'},
-    {'_id': '00002', 'username': 'zerosum2', 'password': '12342'},
-    {'_id': '00003', 'username': 'zerosum3', 'password': '12343'}
-  ];
+  users: Array<Users>;
 
   selectedUser: Users;
 
-  constructor() { }
+  constructor(private _usersService: UsersService) { }
 
   ngOnInit() {
+    this._usersService.getUsers()
+      .subscribe(resUserData => this.users = resUserData);
   }
 
   onSelectUser(user: any) {

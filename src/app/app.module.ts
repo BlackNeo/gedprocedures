@@ -10,11 +10,17 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
+import { HttpModule } from '@angular/http';
+
+import { Md5 } from 'ts-md5/dist/md5';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { PanelComponent } from './panel/panel.component';
+import { SafePipe } from './safe.pipe';
+import { ToMd5Pipe } from './to-md5.pipe';
 
 
 @NgModule({
@@ -23,7 +29,9 @@ import { PanelComponent } from './panel/panel.component';
     HomeComponent,
     LoginComponent,
     UsersComponent,
-    PanelComponent
+    PanelComponent,
+    SafePipe,
+    ToMd5Pipe
   ],
   imports: [
     BrowserModule,
@@ -31,9 +39,10 @@ import { PanelComponent } from './panel/panel.component';
     FormsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    HttpModule
   ],
-  providers: [],
+  providers: [Md5],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
