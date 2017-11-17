@@ -10,7 +10,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 })
 export class LoginComponent implements OnInit, OnChanges {
 
-  protected signIn = false;
+  public signIn = false;
   @Input() user: Users;
   constructor() { }
 
@@ -24,4 +24,6 @@ export class LoginComponent implements OnInit, OnChanges {
   onsignIn() {
     this.signIn = true;
   }
+
+
 }
