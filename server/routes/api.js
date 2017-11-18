@@ -16,7 +16,7 @@ promise.then(function(db, err) {
     }
 });
 
-router.get('/api', function(req, res) {
+router.post('/api', function(req, res) {
     res.send('api works');
     console.log("Api works");
 });
@@ -24,7 +24,7 @@ router.get('/api', function(req, res) {
 /* User API*/
 
 /* Get request for all users */
-router.get('/users', function(req, res) {
+router.post('/users', function(req, res) {
     console.log('Get Access to all users in DB');
     Users.find({})
     .exec(function(err, users) {
@@ -38,7 +38,7 @@ router.get('/users', function(req, res) {
 
 
 /* Get request for a single user */
-router.get('/users/:id', function(req, res) {
+router.post('/users/:id', function(req, res) {
     console.log("Get request for a single User in DB");
     Users.findById(req.params.id)
     .exec(function(err, users) {
