@@ -15,20 +15,16 @@ import { HttpModule } from '@angular/http';
 import { Md5 } from 'ts-md5/dist/md5';
 
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { PanelComponent } from './panel/panel.component';
 import { SafePipe } from './safe.pipe';
 import { ToMd5Pipe } from './to-md5.pipe';
-=======
->>>>>>> parent of 8a3b136... home an login path, api work on api/users
 
 
 @NgModule({
   declarations: [
-<<<<<<< HEAD
     AppComponent,
     HomeComponent,
     LoginComponent,
@@ -36,9 +32,6 @@ import { ToMd5Pipe } from './to-md5.pipe';
     PanelComponent,
     SafePipe,
     ToMd5Pipe
-=======
-    AppComponent
->>>>>>> parent of 8a3b136... home an login path, api work on api/users
   ],
   imports: [
     BrowserModule,
