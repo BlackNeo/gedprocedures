@@ -16,7 +16,7 @@ promise.then(function(db, err) {
     }
 });
 
-router.post('/api', function(req, res) {
+router.get('/api', function(req, res) {
     res.send('api works');
     console.log("Api works");
 });
@@ -24,7 +24,7 @@ router.post('/api', function(req, res) {
 /* User API*/
 
 /* Get request for all users */
-router.post('/users', function(req, res) {
+router.get('/users', function(req, res) {
     console.log('Get Access to all users in DB');
     Users.find({})
     .exec(function(err, users) {
@@ -38,7 +38,7 @@ router.post('/users', function(req, res) {
 
 
 /* Get request for a single user */
-router.post('/users/:id', function(req, res) {
+router.get('/users/:id', function(req, res) {
     console.log("Get request for a single User in DB");
     Users.findById(req.params.id)
     .exec(function(err, users) {
@@ -54,7 +54,7 @@ router.post('/users/:id', function(req, res) {
 router.post('/user', function(req, res) {
     console.log('Post a new user in HTTP');
     var newUser = new Users();
-    newUser.username = req.body.username;
+    newUser.name = req.body.name;
     newUser.password = req.body.password;
     newUser.save(function(err, insertedUser) {
         if(err) {
@@ -70,7 +70,7 @@ router.put('/user/:id', function(req, res) {
     console.log('Uptdate an user in DB');
     Users.findByIdAndUpdate(req.params.id,
     {
-        $set:  {username: req.body.username, password: req.body.password}
+        $set:  {name: req.body.name, password: req.body.password}
     },
     {
         new: true

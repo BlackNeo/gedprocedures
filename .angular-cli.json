@@ -9,8 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico",
-        "../server"
+        "favicon.ico"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -20,8 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
         "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
         "../node_modules/simple-line-icons/css/simple-line-icons.css",        
@@ -29,13 +28,10 @@
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/jquery/dist/jquery.slim.min.js",        
-        "../node_modules/tether/dist/js/tether.js",        
-        "../node_modules/popper.js/dist/umd/popper.min.js", 
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js",       
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/popper.js/dist/popper.min.js",        
         "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
       ],
-      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
