@@ -9,17 +9,9 @@ import { Users } from '../users';
 export class UsersComponent implements OnInit {
 
 
+  @Input() user: Users;
+    constructor() { }
 
-  @Input() users: Users;
-  @Output() SelectUser = new EventEmitter<any>();
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  onSelect(user: Users) {
-    this.SelectUser.emit(user);
-  }
-
+    ngOnInit() {
+    }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Users } from '../users';
 import { Md5 } from 'ts-md5/dist/md5';
 
@@ -8,7 +8,11 @@ import { Md5 } from 'ts-md5/dist/md5';
   styleUrls: ['./login.component.css'],
   providers: [Md5]
 })
-export class LoginComponent implements OnInit, OnChanges {
+export class LoginComponent implements OnInit {
+
+
+  @Input() users: Users;
+  @Output() SelectUser = new EventEmitter<any>();
 
   protected signIn = false;
   @Input() user: Users;
@@ -17,11 +21,8 @@ export class LoginComponent implements OnInit, OnChanges {
   ngOnInit() {
   }
 
-  ngOnChanges() {
-    this.signIn = false;
+  onSelect(user: Users) {
+    this.SelectUser.emit(user);
   }
 
-  onsignIn() {
-    this.signIn = true;
-  }
 }
