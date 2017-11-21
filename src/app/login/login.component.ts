@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
   @Input() users: Users;
   @Output() SelectUser = new EventEmitter<any>();
 
-  protected signIn = false;
+  public signIn = false;
+
   @Input() user: Users;
   constructor() { }
 
