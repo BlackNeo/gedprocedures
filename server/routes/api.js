@@ -54,7 +54,7 @@ router.get('/users/:id', function(req, res) {
 router.post('/user', function(req, res) {
     console.log('Post a new user in HTTP');
     var newUser = new Users();
-    newUser.name = req.body.name;
+    newUser.username = req.body.username;
     newUser.password = req.body.password;
     newUser.save(function(err, insertedUser) {
         if(err) {
@@ -70,7 +70,7 @@ router.put('/user/:id', function(req, res) {
     console.log('Uptdate an user in DB');
     Users.findByIdAndUpdate(req.params.id,
     {
-        $set:  {name: req.body.name, password: req.body.password}
+        $set:  {name: req.body.username, password: req.body.password}
     },
     {
         new: true

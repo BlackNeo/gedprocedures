@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PanelComponent } from './panel/panel.component';
 import { GedComponent } from './ged/ged.component';
+import { FormsModule } from '@angular/forms';
+import { ListComponent } from './list/list.component';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -16,11 +19,14 @@ import { GedComponent } from './ged/ged.component';
     HomeComponent,
     LoginComponent,
     PanelComponent,
-    GedComponent
+    GedComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

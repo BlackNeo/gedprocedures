@@ -202,6 +202,8 @@
       </ul>
     </div>
   </nav>
-  <app-login></app-login>
-  <app-ged></app-ged>
+  <div class="content-wrapper"> 
+    <app-login *ngIf="isLogin" (SelectUser)="onSelectUser($event)" [users]="users"></app-login>
+    <app-ged *ngIf="selectedUser" [user]="selectedUser"></app-ged>
+  </div>
 </body>
