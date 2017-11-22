@@ -19,18 +19,18 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
-        "../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
-        "../node_modules/simple-line-icons/css/simple-line-icons.css",        
-        "../node_modules/font-awesome/css/font-awesome.min.css"
+        "styles.css"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-        "../node_modules/popper.js/dist/popper.min.js",        
-        "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+        "assets/home/vendor/jquery/jquery.min.js",
+        "assets/home/vendor/bootstrap/js/bootstrap.bundle.min.js",
+        "assets/panel/vendor/jquery-easing/jquery.easing.min.js",
+        "assets/panel/vendor/chart.js/Chart.min.js",
+        "assets/panel/vendor/datatables/jquery.dataTables.js",
+        "assets/panel/vendor/datatables/dataTables.bootstrap4.js",
+        "assets/panel/js/sb-admin.min.js",
+        "assets/panel/js/sb-admin-datatables.min.js",
+        "assets/panel/js/sb-admin-charts.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
