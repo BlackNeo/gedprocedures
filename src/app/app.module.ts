@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PanelComponent } from './panel/panel.component';
+import { GedComponent } from './ged/ged.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { PanelComponent } from './panel/panel.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    PanelComponent
+    PanelComponent,
+    GedComponent
   ],
   imports: [
     BrowserModule,
