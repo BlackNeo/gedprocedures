@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy" : "ng build --prod && angular-cli-page",
+    "deploy" : "ng build --prod && angular-cli-ghpages --branch gh-pages",
     "push" : "git push -u origin master",
     "add" : "git add ."
   },
