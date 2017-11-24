@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-var cors = require('cors');
 
 const api = require('./server/routes/api');
 
@@ -16,7 +15,12 @@ app.use(bodyParser.json());
 
 app.use('/api', api);
 
-app.use(cors());
+app.use('*', function allowCrossDomain(res, req, next) {
+    res.header('Access-Control-Allow-Origin', 'example.com');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
