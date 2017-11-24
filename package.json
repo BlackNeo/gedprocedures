@@ -8,7 +8,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy" : "ng build --prod && angular-cli-page",
+    "push" : "git push -u origin master",
+    "add" : "git add ."
   },
   "private": true,
   "dependencies": {
