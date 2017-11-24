@@ -8,7 +8,7 @@ import { User } from '../user';
 })
 export class GedComponent implements OnInit {
 
-  @Input() user: any[];
+  @Input() user: User;
 
   constructor() { }
 
