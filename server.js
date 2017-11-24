@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+var cors = require('cors');
 
 const api = require('./server/routes/api');
 
@@ -14,6 +15,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use('/api', api);
+
+app.use(cors());
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
