@@ -4,8 +4,8 @@ const path = require('path');
 
 const api = require('./server/routes/api');
 
-// const port = 8080;
-const http = require('http');
+// // const port = 8080;
+// const http = require('http');
 
 const app = express();
 
@@ -20,11 +20,11 @@ const app = express();
 //     }
 //   }
 
-http.createServer(function (req, res) {
-     res.writeHead(200, 
-        {'Content-Type': 'text/plain'});
-    res.send('it is running\n'); 
-}).listen(process.env.PORT || 8080);
+// http.createServer(function (req, res) {
+//      res.writeHead(200, 
+//         {'Content-Type': 'text/plain'});
+//     res.send('it is running\n'); 
+// }).listen(process.env.PORT || 8080);
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -50,6 +50,6 @@ app.get('*', (req, res, next) => {
 //     console.log("Server running on localhost :" + port);
 // });
 
-// app.listen(process.env.PORT || 3000, function(){
-//     console.log("Server running on port : %d in %s mode", this.address().port, app.settings.env);
-//   });
+app.listen(process.env.PORT || 8080, function(){
+    console.log("Server running on port : %d in %s mode", this.address().port, app.settings.env);
+  });
