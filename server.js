@@ -4,6 +4,8 @@ const path = require('path');
 
 const api = require('./src/server/routes/api');
 
+const index = path.join(__dirname, 'dist', 'index.html');
+
 // // const port = 8080;
 // const http = require('http');
 
@@ -43,7 +45,7 @@ app.use('*', function allowCrossDomain(res, req, next) {
 app.use(forceSSL());
 
 app.get('*', (req, res, next) => {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
+    res.sendFile(index);
 });
 
 // app.listen(port, function() {
