@@ -44,7 +44,7 @@ app.use('*', function allowCrossDomain(res, req, next) {
 app.use(forceSSL());
 
 app.get('*', (req, res, next) => {
-    res.sendFile(__dirname + '../dist/index.html');
+    res.sendFile(__dirname + '/dist/index.html');
 });
 
 // app.listen(port, function() {
