@@ -4,9 +4,10 @@ const path = require('path');
 
 const api = require('./server/routes/api');
 
-const port = 8080;
-
+// const port = 8080;
 const app = express();
+
+app.set('port', (process.env.PORT || 5000));
 
 // const forceSSL = function() {
 //     return function (req, res, next) {
@@ -37,12 +38,15 @@ app.use('*', function allowCrossDomain(res, req, next) {
 
 app.get('*', (req, res, next) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
+})
+.listen(app.get('port'), function() {
+    console.log("Server running on port : %d in %s mode", app.get('port'));
 });
 
 // app.listen(port, function() {
 //     console.log("Server running on localhost :" + port);
 // });
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Server running on port : %d in %s mode", this.address().port, app.settings.env);
-  });
+// app.listen(process.env.PORT || 3000, function(){
+//     console.log("Server running on port : %d in %s mode", this.address().port, app.settings.env);
+//   });

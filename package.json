@@ -9,9 +9,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "node server.js",
+    "deploy": "ng build -prod --aot",
     "push": "git push -u origin master",
-    "add": "git add ." 
+    "add": "git add .",
+    "heroku": "git push heroku master"
   },
   "engines": {
     "node": "8.9.1",
