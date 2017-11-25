@@ -39,6 +39,6 @@ app.get('*', (req, res, next) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-app.listen(process.env.PORT || port, function() {
+app.listen(port, function() {
     console.log("Server running on localhost :" + port);
 });
