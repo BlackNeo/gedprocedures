@@ -44,7 +44,9 @@
     "save": "^2.3.1",
     "simple-line-icons": "^2.4.1",
     "tether": "^1.4.2",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "typescript": "~2.4.2",
+    "@angular/compiler-cli": "^5.0.0"
   },
   "devDependencies": {
     "@angular/cli": "1.5.2",
