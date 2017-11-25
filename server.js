@@ -4,7 +4,6 @@ const path = require('path');
 
 const api = require('./src/server/routes/api');
 
-const index = ();
 
 // // const port = 8080;
 // const http = require('http');
