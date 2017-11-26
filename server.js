@@ -4,9 +4,22 @@ const path = require('path');
 
 const api = require('./server/routes/api');
 
-const port = 3000;
+const port = 8080;
 
 const app = express();
+
+const forceSSL = function() {
+    return function (req, res, next) {
+        if (req.headers['x-forwarded-proto'] !== 'https') {
+            return res.redirect(
+                    ['https://', req.get('Host'), req.url].join('')
+                );
+            }
+        next();
+        };
+    };
+
+app.use(forceSSL());    
 
 app.use(express.static(path.join(__dirname, 'dist')));
 

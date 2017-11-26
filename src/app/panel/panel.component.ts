@@ -11,9 +11,7 @@ import { UserService } from '../user.service';
 export class PanelComponent implements OnInit {
 
   users: Array<User>;
-
   selectedUser: User;
-
   isLogin: boolean;
 
   constructor(private _userService: UserService) { }

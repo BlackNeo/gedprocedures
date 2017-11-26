@@ -4,16 +4,28 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "http-server dist/",
+    "_heroku": "https://ged-mean-negi.herokuapp.com/",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint": "tslint \"src/**/*.ts\"",
+    "push": "git push -u origin master",
+    "add": "git add .",
+    "heroku": "git push heroku master",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor",
+    "heroku-prebuild": "npm install -g http-server",
+    "heroku-postbuild": "ng build --prod"
+  },
+  "engines" : {
+    "node": "8.9.1",
+    "npm": "5.5.1"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
+    "@angular/cli": "1.5.2",
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.2",
     "@angular/forms": "^5.0.0",
@@ -34,7 +46,10 @@
     "save": "^2.3.1",
     "simple-line-icons": "^2.4.1",
     "tether": "^1.4.2",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "heroku": "^0.2.0",
+    "typescript": "~2.4.2",
+    "@angular/compiler-cli": "^5.0.0"
   },
   "devDependencies": {
     "@angular/cli": "1.5.2",
