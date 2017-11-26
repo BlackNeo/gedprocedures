@@ -32,6 +32,10 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-app.listen(port, function() {
-    console.log("Server running on localhost :" + port);
+// app.listen(port, function() {
+//     console.log("Server running on localhost :" + port);
+// });
+
+app.listen(process.env.PORT || port, function(){
+    console.log("Server running on port : %d in %s mode", this.address().port, app.settings.env);
 });
