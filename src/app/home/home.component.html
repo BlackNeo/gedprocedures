@@ -19,7 +19,7 @@
             <form>
               <form class="form-row" #formHomeSignUp="ngForm" (ngSubmit)="submitForm(formHomeSignUp)">
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Entrer votre adresse mail...">
+                  <input type="email" class="form-control form-control-lg" [(ngModel)]="signUpUser.usermail" placeholder="Entrer votre adresse mail...">
                 </div>
                 <div class="col-12 col-md-3">
                   <button type="submit" class="btn btn-block btn-lg btn-primary">S'inscrire</button>

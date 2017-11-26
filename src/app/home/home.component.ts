@@ -8,13 +8,13 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  urlPrefix = 'ged';
-
   signUpFormToJSON: string;
+  signUpUser: any;
 
   constructor() { }
 
   ngOnInit() {
+    this.signUpUser = { usermail: ''};
   }
 
   submitForm(formHomeSignUp: NgForm) {
