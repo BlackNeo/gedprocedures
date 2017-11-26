@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,15 @@ export class HomeComponent implements OnInit {
 
   urlPrefix = 'ged';
 
+  signUpFormToJSON: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  submitForm(formHomeSignUp: NgForm) {
+    this.signUpFormToJSON = JSON.stringify(formHomeSignUp.value);
+    console.log(this.signUpFormToJSON);
+  }
 }
