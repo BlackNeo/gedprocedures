@@ -10,7 +10,7 @@ declare var $: any;
 })
 export class GedComponent implements OnInit, AfterViewInit {
 
-  @Input() user: any[];
+  @Input() user: User;
 
   constructor() { }
 
