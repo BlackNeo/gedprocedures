@@ -1,10 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const mongoose = require('mongoose');
+var express = require('express');
+var router = express.Router();
+var mongoose = require('mongoose');
 
-const Users = require('../models/users');
+var Users = require('../models/users');
 
-const db = "mongodb://zerosumjoke:(*yp51l0n3!*)@ds261745.mlab.com:61745/ngadminprocess";
+var db = "mongodb://zerosumjoke:(*yp51l0n3!*)@ds261745.mlab.com:61745/ngadminprocess";
 mongoose.Promise = global.Promise;
 
 var promise = mongoose.connect(db, {

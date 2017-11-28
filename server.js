@@ -1,14 +1,14 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
 
-const api = require('./server/routes/api');
+var api = require('./server/routes/api');
 
-const port = 8080;
+var port = 8080;
 
-const app = express();
+var app = express();
 
-const forceSSL = function() {
+var forceSSL = function() {
     return function (req, res, next) {
         if (req.headers['x-forwarded-proto'] !== 'https') {
             return res.redirect(

@@ -11,6 +11,7 @@ import { GedComponent } from './ged/ged.component';
 import { FormsModule } from '@angular/forms';
 import { ListComponent } from './list/list.component';
 import { HttpModule } from '@angular/http';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpModule } from '@angular/http';
     LoginComponent,
     PanelComponent,
     GedComponent,
-    ListComponent
+    ListComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

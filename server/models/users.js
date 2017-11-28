@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
-const usersSchema = new Schema ({
+var usersSchema = new Schema ({
     id: String,
     username: String,
     password: String
