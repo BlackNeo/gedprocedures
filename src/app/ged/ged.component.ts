@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { User } from '../user';
-import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { } from '@angular/core/src/metadata/lifecycle_hooks';
 declare var $: any;
 
 @Component({
@@ -18,6 +18,8 @@ export class GedComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    $.getScript('../../assets/panel/js/sb-admin-charts.js', function(){});
+    setTimeout(() => {
+      $.getScript('../../assets/panel/js/sb-admin-charts.js', function(){});
+    }, 1000);
   }
 }
