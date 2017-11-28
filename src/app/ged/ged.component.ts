@@ -20,7 +20,6 @@ export class GedComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       $.getScript('../../assets/panel/js/sb-admin.js', function(){});
-      $.getScript('../../assets/panel/js/sb-admin-datatables.js', function(){});
       $.getScript('../../assets/panel/js/sb-admin-charts.js', function(){});
     }, 1000);
   }
