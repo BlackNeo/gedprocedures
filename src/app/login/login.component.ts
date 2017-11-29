@@ -1,7 +1,8 @@
-import { Component, OnInit, Input, EventEmitter, Output, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, OnChanges, AfterViewInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { NgForm } from '@angular/forms';
 import { User } from '../user';
+declare var $: any;
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { User } from '../user';
   styleUrls: ['./login.component.css'],
   providers : [UserService]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
 
   @Input() users: any[];
   @Output() SelectUser = new EventEmitter<any>();
@@ -27,6 +28,11 @@ export class LoginComponent implements OnInit {
     this.isLogin = true;
   }
 
+  ngAfterViewInit() {
+    $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
+    $.getScript('../../assets/panel/js/sb-admin.js', function(){});
+  }
+
   submitForm(formLogin: NgForm) {
     this.userFormToJSON = JSON.stringify(formLogin.value);
     this.userLoged = JSON.parse(this.userFormToJSON);
@@ -35,13 +41,18 @@ export class LoginComponent implements OnInit {
 
     console.log(this.userLoged.username);
     for (const user of this.users) {
-      if (user.username == this.userLoged.username && user.password == this.userLoged.password) {
-        this.SelectUser.emit(user);
-        this.isLogin = false;
-        console.log(user);
+      if (user.username === this.userLoged.username) {
+        if (user.password === this.userLoged.password) {
+          this.SelectUser.emit(user);
+          console.log(user);
+          this.isLogin = true;
+        } else {
+            this.isLogin = false;
+            console.log('Password not matching');
+          }
       } else {
-        this.isLogin = true;
-        console.log('Password not matching');
+        this.isLogin = false;
+        console.log('User not matching');
       }
      }
   }
