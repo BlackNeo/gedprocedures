@@ -8,10 +8,25 @@ var myLineChart = new Chart(ctx, {
   data: {
     labels: ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin"],
     datasets: [{
-      label: "Document",
+      label: "Factures",
       backgroundColor: "rgba(2,117,216,1)",
       borderColor: "rgba(2,117,216,1)",
-      data: [5, 13, 22, 15, 25, 24],
+      data: [5, 13, 12, 15, 13, 11],
+          
+    },
+    {
+      label: "Documents officiels",
+      backgroundColor: "rgba(255,193,7,1)",
+      borderColor: "rgba(255,193,7,1)",
+      data: [8, 4, 11, 12, 9, 12],
+          
+    },
+    {
+      label: "Documents administratifs",
+      backgroundColor: "rgba(40,167,69,1)",
+      borderColor: "rgba(40,167,69,1)",
+      data: [11, 8, 9, 4, 12, 12],
+          
     }],
   },
   options: {
@@ -30,7 +45,7 @@ var myLineChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 30,
+          max: 15,
           maxTicksLimit: 5
         },
         gridLines: {
