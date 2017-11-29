@@ -1,7 +1,9 @@
 <body class="sticky-footer bg-dark toogled sidenav-toggled" id="page-top">
-  <app-nav></app-nav>
+  <app-nav-visitor *ngIf="!isLogin"></app-nav-visitor>
+  <app-nav-user *ngIf="isLogin"></app-nav-user>  
   <div class="content-wrapper"> 
     <app-login *ngIf="isLogin" (SelectUser)="onSelectUser($event)" [users]="users"></app-login>
-    <app-ged *ngIf="selectedUser" [user]="selectedUser"></app-ged>
+    <app-dashboard-home *ngIf="selectedUser" [user]="selectedUser"></app-dashboard-home>
   </div>
 </body>
+  

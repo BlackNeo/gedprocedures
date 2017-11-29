@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
     $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
     $.getScript('../../assets/panel/js/sb-admin.js', function(){});
   }
@@ -44,7 +45,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
       if (user.username === this.userLoged.username) {
         if (user.password === this.userLoged.password) {
           this.SelectUser.emit(user);
-          console.log(user);
+          console.log('User loged : ' + user);
           this.isLogin = true;
         } else {
             this.isLogin = false;
