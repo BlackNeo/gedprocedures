@@ -18,6 +18,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ProfilComponent } from './profil/profil.component';
+import { LogoutComponent } from './logout/logout.component';
+import { FooterComponent } from './footer/footer.component';
+import { SafeDepositBoxComponent } from './safe-deposit-box/safe-deposit-box.component';
 
 
 @NgModule({
@@ -31,7 +35,11 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     LoginComponent,
     RegisterComponent,
     ForgetPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    ProfilComponent,
+    LogoutComponent,
+    FooterComponent,
+    SafeDepositBoxComponent
   ],
   imports: [
     BrowserModule,

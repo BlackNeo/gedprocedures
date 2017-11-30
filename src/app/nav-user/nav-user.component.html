@@ -13,11 +13,25 @@
         </a>
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
-        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#safe-deposit-box" data-parent="#ged-navbar-sidenav">
-          <i class="fa fa-fw fa-sitemap"></i>
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#user-menu" data-parent="#ged-navbar-sidenav">
+          <i class="fa fa-fw fa-user"></i>
+          <span class="nav-link-text">Profil</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="user-menu">
+          <li>
+            <a href="/profil">Profil</a>
+          </li>
+          <li>
+            <a href="/logout">Se deconnecter</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#safe-deposit-box-menu" data-parent="#ged-navbar-sidenav">
+          <i class="fa fa-fw fa-folder "></i>
           <span class="nav-link-text">Mon coffre</span>
         </a>
-        <ul class="sidenav-second-level collapse" id="safe-deposit-box">
+        <ul class="sidenav-second-level collapse" id="safe-deposit-box-menu">
             <li>
               <a href="/coffre">Consulter mes documents</a>
             </li>
@@ -31,7 +45,7 @@
       </li>          
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#online-process" data-parent="#ged-navbar-sidenav">
-          <i class="fa fa-fw fa-sitemap"></i>
+          <i class="fa fa-fw fa-cogs"></i>
           <span class="nav-link-text">Mes prodédures</span>
         </a>
         <ul class="sidenav-second-level collapse" id="online-process">
@@ -48,7 +62,7 @@
       </li>          
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#online-legaliste" data-parent="#ged-navbar-sidenav">
-          <i class="fa fa-fw fa-sitemap"></i>
+          <i class="fa fa-fw fa-comments"></i>
           <span class="nav-link-text">Mes juristes</span>
         </a>
         <ul class="sidenav-second-level collapse" id="online-legaliste">
@@ -76,7 +90,7 @@
         <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-fw fa-envelope"></i>
           <span class="d-lg-none">Messages
-            <span class="badge badge-pill badge-primary">12 New</span>
+            <span class="badge badge-pill badge-primary">6 nouveaux</span>
           </span>
           <span class="indicator text-primary d-none d-lg-block">
             <i class="fa fa-fw fa-circle"></i>
@@ -118,7 +132,7 @@
         <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-fw fa-bell"></i>
           <span class="d-lg-none">Statuts
-            <span class="badge badge-pill badge-warning">6 nouvelles</span>
+            <span class="badge badge-pill badge-warning">6 nouveaux</span>
           </span>
           <span class="indicator text-warning d-none d-lg-block">
             <i class="fa fa-fw fa-circle"></i>
@@ -171,7 +185,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-          <i class="fa fa-fw fa-sign-out"></i>Se deconnecter</a>
+          <i class="fa fa-fw fa-sign-out"></i>Se déconnecter</a>
       </li>
     </ul>
   </div>
