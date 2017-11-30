@@ -20,7 +20,8 @@ export class DashboardHomeComponent implements OnInit, AfterViewInit {
       $.getScript('../../assets/panel/vendor/chart.js/Chart.js', function(){});
       setTimeout(() => {
         $.getScript('../../assets/panel/js/sb-admin.js', function(){});
-        $.getScript('../../assets/panel/js/sb-admin-charts.js', function(){});
+        $.getScript('../../assets/panel/js/dashboard-datatables.js', function(){});
+        $.getScript('../../assets/panel/js/dashboard-charts.js', function(){});
       }, 1000);
     }
 

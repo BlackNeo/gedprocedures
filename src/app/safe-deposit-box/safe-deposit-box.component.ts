@@ -20,7 +20,7 @@ export class SafeDepositBoxComponent implements OnInit, AfterViewInit {
     $.getScript('../../assets/panel/vendor/chart.js/Chart.js', function(){});
     setTimeout(() => {
       $.getScript('../../assets/panel/js/sb-admin.js', function(){});
-      $.getScript('../../assets/panel/js/sb-admin-datatables.js', function(){});
+      $.getScript('../../assets/panel/js/safe-deposit-datatables.js', function(){});
       $.getScript('../../assets/panel/js/safe-deposit-charts.js', function(){});
     }, 1000);
   }
