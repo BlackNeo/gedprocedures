@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
       if (user.username === this.userLoged.username) {
         if (user.password === this.userLoged.password) {
           this.SelectUser.emit(user);
-          console.log('User loged : ' + user);
+          console.log('User loged : ' + user.username);
           this.isLogin = true;
         } else {
             this.isLogin = false;

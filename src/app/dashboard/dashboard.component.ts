@@ -26,7 +26,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   onSelectUser(user: any) {
     this.selectedUser = user;
     this.isLogin = false;
-    console.log(this.selectedUser);
   }
 
   ngAfterViewInit() {
