@@ -22,6 +22,10 @@ import { ProfilComponent } from './profil/profil.component';
 import { LogoutComponent } from './logout/logout.component';
 import { FooterComponent } from './footer/footer.component';
 import { SafeDepositBoxComponent } from './safe-deposit-box/safe-deposit-box.component';
+import { ProcessComponent } from './process/process.component';
+import { MessagesComponent } from './messages/messages.component';
+import { NewMessageComponent } from './new-message/new-message.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -39,7 +43,11 @@ import { SafeDepositBoxComponent } from './safe-deposit-box/safe-deposit-box.com
     ProfilComponent,
     LogoutComponent,
     FooterComponent,
-    SafeDepositBoxComponent
+    SafeDepositBoxComponent,
+    ProcessComponent,
+    MessagesComponent,
+    NewMessageComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

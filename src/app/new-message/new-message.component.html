@@ -1,0 +1,52 @@
+<body class="sticky-footer bg-dark" id="page-top">
+    <app-nav-user></app-nav-user>
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/dashboard">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Nouveau message</li>
+        </ol>
+        <!-- Icon Cards-->
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Example Notifications Card-->
+            <div class="card card-login mx-auto mt-5">
+                <div class="card-header">Nouveau message</div>
+                <div class="card-body">
+                  <div class="text-center mt-4 mb-5">
+                    <h4>Vous souhaitez nous contacter ?</h4>
+                    <p>Veuillez sélectionner le service que vous souhaitez contacter</p>
+                  </div>
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Type de procédure</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Assisstance juridique</option>
+                        <option>Démarche en ligne</option>
+                      </select>
+                    </div>                     
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Sujet</label>
+                      <input class="form-control" name="register-code" type="text" placeholder="Veuillez sujet le code ici...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Méssages</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+                    <a class="btn btn-primary btn-block" routerLink="/reset-password"></a>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- ./End Icon Cards-->
+      </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <app-footer></app-footer>
+  </body>
+  
