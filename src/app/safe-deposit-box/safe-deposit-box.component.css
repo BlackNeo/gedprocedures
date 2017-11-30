@@ -1,3 +1,9 @@
-td > i.fa {
+td > i.fa {    
+    display: block;
     text-align: center;
+}
+
+table.table-bordered.dataTable td:last-child,
+table.table-bordered.dataTable th:last-child {    
+    text-align: right;
 }
