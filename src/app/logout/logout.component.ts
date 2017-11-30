@@ -14,9 +14,8 @@ export class LogoutComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
     $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
-    setTimeout(() => {
-      $.getScript('../../assets/panel/js/sb-admin.js', function(){});
-    }, 1000);
+    $.getScript('../../assets/panel/js/sb-admin.js', function(){});
   }
 }
