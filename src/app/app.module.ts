@@ -26,6 +26,9 @@ import { ProcessComponent } from './process/process.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NewMessageComponent } from './new-message/new-message.component';
 import { ChatComponent } from './chat/chat.component';
+import { ConditionsComponent } from './conditions/conditions.component';
+import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
+import { StatutsComponent } from './statuts/statuts.component';
 
 
 @NgModule({
@@ -47,7 +50,10 @@ import { ChatComponent } from './chat/chat.component';
     ProcessComponent,
     MessagesComponent,
     NewMessageComponent,
-    ChatComponent
+    ChatComponent,
+    ConditionsComponent,
+    MentionsLegalesComponent,
+    StatutsComponent
   ],
   imports: [
     BrowserModule,

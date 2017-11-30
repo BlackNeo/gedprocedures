@@ -17,6 +17,7 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 
 import { ProfilComponent } from './profil/profil.component';
 import { SafeDepositBoxComponent } from './safe-deposit-box/safe-deposit-box.component';
+import { ProcessComponent } from './process/process.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: HomeComponent},
@@ -25,13 +26,14 @@ const routes: Routes = [
   {path: 'footer', component: FooterComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'dashboard-home', component: DashboardHomeComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'logout', component: LogoutComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'reset-password', component: ResetPasswordComponent},
-  {path: 'forget-password', component: ForgetPasswordComponent},
+  {path: 'se-connecter', component: LoginComponent},
+  {path: 'se-deconnecter', component: LogoutComponent},
+  {path: 's-inscrire', component: RegisterComponent},
+  {path: 'renouveler-mot-de-passe', component: ResetPasswordComponent},
+  {path: 'mot-de-passe-oublie', component: ForgetPasswordComponent},
   {path: 'profil', component: ProfilComponent},
-  {path: 'coffre', component: SafeDepositBoxComponent}
+  {path: 'coffre', component: SafeDepositBoxComponent},
+  {path: 'procedures', component: ProcessComponent}
 ];
 
 @NgModule({

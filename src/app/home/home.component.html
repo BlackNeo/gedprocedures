@@ -22,7 +22,7 @@
                     <input type="email" name="username" class="form-control form-control-lg" [(ngModel)]="signUpUser.usermail" placeholder="Entrer votre adresse mail...">
                   </div>
                   <div class="col-12 col-md-3">
-                    <button type="submit" class="btn btn-block btn-lg btn-primary">S'inscrire</button>
+                    <button type="submit" class="btn btn-block btn-lg btn-primary" routerLink="/s-inscrire">S'inscrire</button>
                   </div>
                 </form>
               </form>
@@ -139,7 +139,7 @@
                     <input type="email" class="form-control form-control-lg" placeholder="Entrez votre adresse mail...">
                   </div>
                   <div class="col-12 col-md-3">
-                    <button type="submit" class="btn btn-block btn-lg btn-primary">S'inscrire</button>
+                    <button type="submit" class="btn btn-block btn-lg btn-primary" routerLink="/s-inscrire">S'inscrire</button>
                   </div>
                 </div>
               </form>
@@ -163,11 +163,11 @@
                 </li>
                 <li class="list-inline-item">&sdot;</li>
                 <li class="list-inline-item">
-                  <a routerLink="/terms">Terms of Use</a>
+                  <a routerLink="/conditions">Terms of Use</a>
                 </li>
                 <li class="list-inline-item">&sdot;</li>
                 <li class="list-inline-item">
-                  <a routerLink="/privacy">Mentions légales</a>
+                  <a routerLink="/mentions-legales">Mentions légales</a>
                 </li>
               </ul>
               <p class="text-muted small mb-4 mb-lg-0">&copy; G.A.D @ Zero Sum Dev 2017. All Rights Reserved.</p>

@@ -2,11 +2,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 declare var $: any;
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css']
+  selector: 'app-conditions',
+  templateUrl: './conditions.component.html',
+  styleUrls: ['./conditions.component.css']
 })
-export class ChatComponent implements OnInit, AfterViewInit {
+export class ConditionsComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
