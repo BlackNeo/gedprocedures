@@ -19,6 +19,14 @@ import { ProfilComponent } from './profil/profil.component';
 import { SafeDepositBoxComponent } from './safe-deposit-box/safe-deposit-box.component';
 import { ProcessComponent } from './process/process.component';
 
+import { MessagesComponent } from './messages/messages.component';
+import { NewMessageComponent } from './new-message/new-message.component';
+import { ChatComponent } from './chat/chat.component';
+import { StatutsComponent } from './statuts/statuts.component';
+
+import { ConditionsComponent } from './conditions/conditions.component';
+import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
+
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: HomeComponent},
   {path: 'nav-vistor', component: NavVisitorComponent},
@@ -33,7 +41,13 @@ const routes: Routes = [
   {path: 'mot-de-passe-oublie', component: ForgetPasswordComponent},
   {path: 'profil', component: ProfilComponent},
   {path: 'coffre', component: SafeDepositBoxComponent},
-  {path: 'procedures', component: ProcessComponent}
+  {path: 'procedures', component: ProcessComponent},
+  {path: 'messages', component: MessagesComponent},
+  {path: 'nouveau-message', component: NewMessageComponent},
+  {path: 'chat', component: ChatComponent},
+  {path: 'conditions-generales', component: ConditionsComponent},
+  {path: 'mentions-legales', component: MentionsLegalesComponent},
+  {path: 'statuts', component: StatutsComponent}
 ];
 
 @NgModule({
