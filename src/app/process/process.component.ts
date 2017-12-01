@@ -16,6 +16,10 @@ export class ProcessComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
     $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
-    $.getScript('../../assets/panel/js/sb-admin.js', function(){});
+    $.getScript('../../assets/panel/vendor/chart.js/Chart.js', function(){});
+    setTimeout(() => {
+      $.getScript('../../assets/panel/js/sb-admin.js', function(){});
+      $.getScript('../../assets/panel/js/process-charts.js', function(){});
+    }, 1000);
   }
 }
