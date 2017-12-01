@@ -101,3 +101,9 @@
     background-color: #e9ecef !important;
   }
   
+  section.showcase .overlay {
+    background-color: #343a40;
+    opacity: 0.65;
+    height: 100%;
+    width: 100%;
+}
