@@ -36,7 +36,8 @@
         "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
         "assets/panel/vendor/datatables/jquery.dataTables.js",
         "assets/panel/vendor/datatables/dataTables.bootstrap4.js",
-        "assets/panel/vendor/chart.js/Chart.js"
+        "assets/panel/vendor/chart.js/Chart.js",
+        "assets/panel/js/sb-admin.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
