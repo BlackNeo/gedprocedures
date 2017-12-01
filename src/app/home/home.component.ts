@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.signUpUser = { usermail: ''}
+    this.signUpUser = { usermail: ''};
   }
 
   submitForm(formHomeSignUp: NgForm) {

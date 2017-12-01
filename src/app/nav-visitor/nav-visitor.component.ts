@@ -12,7 +12,7 @@ export class NavVisitorComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
   }
-  
+
   ngAfterViewInit() {
     $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
     $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
