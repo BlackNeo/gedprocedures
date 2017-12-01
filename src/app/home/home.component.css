@@ -4,8 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
  body {
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-  
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #e9ecef ;}  
   h1,
   h2,
   h3,
@@ -96,4 +96,8 @@
   footer.footer {
     padding-top: 4rem;
     padding-bottom: 4rem; }
+
+  .bg-light {
+    background-color: #e9ecef ;
+  }
   
