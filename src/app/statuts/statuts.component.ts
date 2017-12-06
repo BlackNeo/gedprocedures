@@ -19,6 +19,8 @@ export class StatutsComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       $.getScript('../../assets/panel/vendor/datatables/jquery.dataTables.js', function(){});
       $.getScript('../../assets/panel/vendor/datatables/dataTables.bootstrap4.js', function(){});
+    }, 500);
+    setTimeout(() => {
       $.getScript('../../assets/panel/js/sb-admin.js', function(){});
       $.getScript('../../assets/panel/js/statuts-datatables.js', function(){});
     }, 1000);
