@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "assets/panel/vendor/bootstrap/css/bootstrap.css",
         "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
         "../node_modules/simple-line-icons/css/simple-line-icons.css",        
