@@ -14,6 +14,7 @@ export class StatutsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
     $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
     setTimeout(() => {
       $.getScript('../../assets/panel/vendor/datatables/jquery.dataTables.js', function(){});
