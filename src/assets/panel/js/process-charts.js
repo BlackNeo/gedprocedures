@@ -6,7 +6,7 @@ var myPieChart = new Chart(ctx, {
     labels: ["Procédures courantes", "Procédures intérompues", "Procédures en cours", "Procédures terminées"],
     datasets: [{
       data: [3, 2, 4, 5],
-      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+      backgroundColor: ['#b2d7ff', '#ed9aa2', '#ffe69b', '#93d3a2'],
     }],
   },
 });

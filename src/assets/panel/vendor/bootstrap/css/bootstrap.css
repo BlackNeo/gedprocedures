@@ -1569,7 +1569,7 @@ pre code {
   padding: .2rem .5rem;
   vertical-align: top;
   border-top: 1px solid #e9ecef;
-  font-size: 0.75rem;
+  font-size: .9rem;
 }
 
 .table thead th {
@@ -4315,8 +4315,7 @@ tbody.collapse.show {
 
 .page-item:first-child .page-link {
   margin-left: 0;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-radius: 0px;
 }
 
 .page-item:last-child .page-link {
@@ -4327,8 +4326,8 @@ tbody.collapse.show {
 .page-item.active .page-link {
   z-index: 2;
   color: #fff;
-  background-color: #b2d7ff;
-  border-color: #b2d7ff;
+  background-color: #e9ecef;
+  border-color: #e9ecef;
 }
 
 .page-item.disabled .page-link {

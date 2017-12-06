@@ -9,22 +9,22 @@ var myLineChart = new Chart(ctx, {
     labels: ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin"],
     datasets: [{
       label: "Factures",
-      backgroundColor: "rgba(2,117,216,1)",
-      borderColor: "rgba(2,117,216,1)",
+      backgroundColor: "rgba(178,215,255,1)",
+      borderColor: "rgba(178,215,255,1)",
       data: [5, 13, 12, 15, 13, 11],
           
     },
     {
       label: "Documents officiels",
-      backgroundColor: "rgba(255,193,7,1)",
-      borderColor: "rgba(255,193,7,1)",
+      backgroundColor: "rgba(255,230,155,1)",
+      borderColor: "rgba(255,230,155,1)",
       data: [8, 4, 11, 12, 9, 12],
           
     },
     {
       label: "Documents administratifs",
-      backgroundColor: "rgba(40,167,69,1)",
-      borderColor: "rgba(40,167,69,1)",
+      backgroundColor: "rgba(147,211,162,1)",
+      borderColor: "rgba(147,211,162,1)",
       data: [11, 8, 9, 4, 12, 12],
           
     }],
