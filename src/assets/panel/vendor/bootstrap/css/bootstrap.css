@@ -4345,7 +4345,7 @@ tbody.collapse.show {
   line-height: 1.25;
   color: #b2d7ff;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: none;
 }
 
 .page-link:focus, .page-link:hover {
