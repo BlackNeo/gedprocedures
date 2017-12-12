@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this._userService.getUsers()
       .subscribe(resUserData => this.users = resUserData);
+    this.isLogin = false;
   }
 
   onSelectUser(user: any) {
