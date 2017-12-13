@@ -29,7 +29,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       this.isLogin = false;
       alert('this.isLogin = false;');
       this._userService.getUsers()
-      .subscribe(resUserData => this.users = resUserData);
+        .subscribe(resUserData => this.users = resUserData);
+      alert(this.users);  
       for (const user of this.users) {
         alert('for (const user of this.users)');
        if (user.username === this.userStorage) {
