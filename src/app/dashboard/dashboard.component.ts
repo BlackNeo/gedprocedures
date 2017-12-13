@@ -15,19 +15,26 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   users: Array<User>;
   selectedUser: User;
   isLogin: boolean;
-  user: any;
+  userStorage: any;
   isLoginStorage: any;
 
   constructor(private _userService: UserService,
               private _sessionStorage: SessionStorageService) { }
 
   ngOnInit() {
-    this.user = this._sessionStorage.retrieve('user');
+    this.userStorage = this._sessionStorage.retrieve('user');
     this.isLoginStorage = this._sessionStorage.retrieve('isLogin');
-    if (this.user && this.isLoginStorage === false) {
+    if (this.userStorage && this.isLoginStorage === false) {
       this.isLogin = false;
-    } else {
-      this.isLogin = true;
+      this._userService.getUsers()
+      .subscribe(resUserData => this.users = resUserData);
+      for (const user of this.users) {
+       if (user.username === this.userStorage) {
+           this.selectedUser = user;
+          }
+        }
+      } else {
+        this.isLogin = true;
     }
     this._userService.getUsers()
       .subscribe(resUserData => this.users = resUserData);
