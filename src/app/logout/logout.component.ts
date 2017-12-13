@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import {SessionStorageService} from 'ngx-webstorage';
 declare var $: any;
 
 @Component({
@@ -8,7 +10,9 @@ declare var $: any;
 })
 export class LogoutComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  isLogin: boolean;
+
+  constructor(private _sessionStorage: SessionStorageService) { }
 
   ngOnInit() {
   }
@@ -18,4 +22,10 @@ export class LogoutComponent implements OnInit, AfterViewInit {
     $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
     $.getScript('../../assets/panel/js/sb-admin.js', function(){});
   }
+
+  submitForm(formLogin: NgForm) {
+    this.isLogin = false;
+    this._sessionStorage.store('isLogin', this.isLogin);
+  }
+
 }

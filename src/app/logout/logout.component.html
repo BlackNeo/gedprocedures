@@ -9,7 +9,7 @@
             <h4>Vous souhaitez vous déconnecter</h4>
             <p>Selectionnez le bouton "Se déconnecter" pour quitter la session courante</p>
           </div>
-          <form>
+          <form #formLogout="ngForm" (ngSubmit)="submitForm(formLogout)">
               <a class="btn btn-primary btn-block" routerLink="/">Se déconnecter</a>
           </form>
         </div>
