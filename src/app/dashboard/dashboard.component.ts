@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.isLoginStorage = this._sessionStorage.retrieve('isLogin');
     if (this.userStorage && this.isLoginStorage === false) {
       this.isLogin = false;
-      this.selectedUser = this.selectedUser;
+      this.selectedUser = this.userStorage;
       } else {
         this.isLogin = true;
     }
