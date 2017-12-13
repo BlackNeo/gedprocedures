@@ -17,16 +17,17 @@
     "heroku-prebuild": "npm install -g http-server",
     "heroku-postbuild": "ng build --prod"
   },
-  "engines" : {
+  "engines": {
     "node": "8.9.1",
     "npm": "5.5.1"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
-    "@angular/common": "^5.0.0",
     "@angular/cli": "1.5.2",
+    "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
     "@angular/core": "^5.0.2",
     "@angular/forms": "^5.0.0",
     "@angular/http": "^5.0.0",
@@ -39,17 +40,17 @@
     "core-js": "^2.4.1",
     "express": "^4.16.2",
     "font-awesome": "^4.7.0",
+    "heroku": "^0.2.0",
     "jquery": "^3.2.1",
     "mongoose": "^4.13.3",
+    "ngx-webstorage": "^2.0.1",
     "popper.js": "^1.12.9",
     "rxjs": "^5.5.2",
     "save": "^2.3.1",
     "simple-line-icons": "^2.4.1",
     "tether": "^1.4.2",
-    "zone.js": "^0.8.14",
-    "heroku": "^0.2.0",
     "typescript": "~2.4.2",
-    "@angular/compiler-cli": "^5.0.0"
+    "zone.js": "^0.8.14"
   },
   "devDependencies": {
     "@angular/cli": "1.5.2",
