@@ -49,16 +49,16 @@ export class LoginComponent implements OnInit, AfterViewInit {
         if (user.password === this.userLoged.password) {
           this.SelectUser.emit(user);
           console.log('User loged : ' + user.username);
-          this.isLogin = true;
+          this.isLogin = false;
         } else {
-            this.isLogin = false;
+            this.isLogin = true;
             console.log('Password not matching');
           }
       } else {
-        this.isLogin = false;
+        this.isLogin = true;
         console.log('User not matching');
       }
-     }
+    }
     this._sessionStorage.store('isLogin', this.isLogin);
   }
 }
