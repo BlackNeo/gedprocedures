@@ -3,7 +3,7 @@
   <app-nav-user *ngIf="!isLogin"></app-nav-user>  
   <div class="content-wrapper"> 
     <app-login *ngIf="isLogin" (SelectUser)="onSelectUser($event)" [users]="users"></app-login>
-    <app-dashboard-home *ngIf="selectedUser" [user]="selectedUser"></app-dashboard-home>
+    <app-dashboard-home *ngIf="!isLogin" [user]="selectedUser"></app-dashboard-home>
   </div>
 </body>
   
