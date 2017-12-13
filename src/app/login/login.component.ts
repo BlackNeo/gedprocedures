@@ -2,6 +2,7 @@ import { Component, OnInit, Input, EventEmitter, Output, OnChanges, AfterViewIni
 import { UserService } from '../user.service';
 import { NgForm } from '@angular/forms';
 import { User } from '../user';
+import {SessionStorageService} from 'ngx-webstorage';
 declare var $: any;
 
 @Component({
@@ -21,11 +22,13 @@ export class LoginComponent implements OnInit, AfterViewInit {
   userLoged: User = { _id: '', username: '', password: ''};
   user: User;
 
-  constructor(private _userService: UserService) { }
+  constructor(private _userService: UserService,
+              private _sessionStorage: SessionStorageService) { }
 
   ngOnInit() {
     this.user = { _id: '', username: '', password: ''};
     this.isLogin = true;
+    this._sessionStorage.store('isLogin', this.isLogin);
   }
 
   ngAfterViewInit() {
@@ -56,6 +59,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
         console.log('User not matching');
       }
      }
+    this._sessionStorage.store('isLogin', this.isLogin);
   }
 }
 

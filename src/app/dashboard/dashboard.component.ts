@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import {SessionStorageService} from 'ngx-webstorage';
 declare var $: any;
 
 @Component({
@@ -15,12 +16,11 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   selectedUser: User;
   isLogin: boolean;
 
-  constructor(private _userService: UserService) { }
+  constructor(private _userService: UserService,
+              private _sessionStorage: SessionStorageService) { }
 
   ngOnInit() {
-    if (!this.selectedUser) {
-      this.isLogin = true;
-    }
+    this.isLogin = this._sessionStorage.retrieve('isLogin');
     this._userService.getUsers()
       .subscribe(resUserData => this.users = resUserData);
   }
@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   onSelectUser(user: any) {
     this.selectedUser = user;
     this.isLogin = false;
+    this._sessionStorage.store('isLogin', this.isLogin);
     console.log('User loged :' + this.selectedUser.username);
   }
 
