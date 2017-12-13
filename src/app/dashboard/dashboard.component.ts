@@ -31,6 +31,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       for (const user of this.users) {
        if (user.username === this.userStorage) {
            this.selectedUser = user;
+           alert('I got my user');
           }
         }
       } else {
@@ -45,7 +46,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this._sessionStorage.store('user', this.selectedUser.username);
     this.isLogin = false;
     this._sessionStorage.store('isLogin', this.isLogin);
-    console.log('User loged :' + this.selectedUser.username);
   }
 
   ngAfterViewInit() {

@@ -42,8 +42,6 @@ export class LoginComponent implements OnInit, AfterViewInit {
     this.userLoged = JSON.parse(this.userFormToJSON);
     this._userService.getUsers()
      .subscribe(resUserData => this.users = resUserData);
-
-    console.log(this.userLoged.username);
     for (const user of this.users) {
       if (user.username === this.userLoged.username) {
         if (user.password === this.userLoged.password) {
