@@ -27,10 +27,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
     if (this.userStorage && this.isLoginStorage === false) {
       this.isLogin = false;
-      alert('this.isLogin = false;');
       this._userService.getUsers()
         .subscribe(resUserData => this.users = resUserData);
-      alert(this.users);
+      console.log(this._userService.getUsers());
       for (const user of this.users) {
         alert('for (const user of this.users)');
        if (user.username === this.userStorage) {
@@ -41,8 +40,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       } else {
         this.isLogin = true;
     }
-    this._userService.getUsers()
-      .subscribe(resUserData => this.users = resUserData);
   }
 
   onSelectUser(user: any) {
