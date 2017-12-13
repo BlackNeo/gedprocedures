@@ -33,7 +33,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   onSelectUser(user: any) {
-    this.selectedUser = user;
+    this.selectedUser = user.username;
     this.isLogin = false;
     this._sessionStorage.store('user', this.selectedUser.username);
     this._sessionStorage.store('isLogin', this.isLogin);
