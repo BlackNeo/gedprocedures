@@ -22,9 +22,12 @@ export class DashboardComponent implements OnInit, AfterViewInit {
               private _sessionStorage: SessionStorageService) { }
 
   ngOnInit() {
-    this.isLogin = true;
-    if (this.isLoginStorage === false) {
+    this.user = this._sessionStorage.retrieve('user');
+    this.isLoginStorage = this._sessionStorage.retrieve('isLogin');
+    if (this.user && this.isLoginStorage === false) {
       this.isLogin = false;
+    } else {
+      this.isLogin = true;
     }
     this._userService.getUsers()
       .subscribe(resUserData => this.users = resUserData);
@@ -32,10 +35,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   onSelectUser(user: any) {
     this.selectedUser = user;
-    this.user = this._sessionStorage.store('user', this.selectedUser.username);
+    this._sessionStorage.store('user', this.selectedUser.username);
     this.isLogin = false;
     this._sessionStorage.store('isLogin', this.isLogin);
-    this.isLoginStorage = this._sessionStorage.retrieve('isLogin');
     console.log('User loged :' + this.selectedUser.username);
   }
 
