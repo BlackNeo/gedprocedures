@@ -26,6 +26,7 @@ export class LogoutComponent implements OnInit, AfterViewInit {
   submitForm(formLogin: NgForm) {
     this.isLogin = false;
     this._sessionStorage.store('isLogin', this.isLogin);
+    this._sessionStorage.clear('user');
   }
 
 }
