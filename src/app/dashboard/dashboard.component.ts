@@ -40,9 +40,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
-    $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
-    $.getScript('../../assets/panel/js/sb-admin.js', function(){});
+    // $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
+    // $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
+    // $.getScript('../../assets/panel/js/sb-admin.js', function(){});
   }
 
 }
