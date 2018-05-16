@@ -15,7 +15,7 @@
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
     "heroku-prebuild": "npm install -g http-server",
-    "postinsatll": "ng build --aot -prod"
+    "postinstall": "ng build --aot -prod"
   },
   "engines": {
     "node": "8.9.1",
