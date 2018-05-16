@@ -10,5 +10,5 @@
     "test.ts",
     "**/*.spec.ts"
   ],
-  "paths": { "@angular/*": ["../node_modules/@angular/*"] }
+  "paths": { "@angular/*": ["../../node_modules/@angular/*"] }
 }
