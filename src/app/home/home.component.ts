@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +9,20 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  signUpFormToJSON: string;
-  signUpUser: any;
+  mailFormToJSON: string;
+  @Input() userMail: string;
 
-  constructor() { }
+  constructor( private _sessionStorage: SessionStorageService ) { }
 
   ngOnInit() {
-    this.signUpUser = { usermail: ''};
+    this.userMail = '';
   }
 
-  submitForm(formRegister: NgForm) {
-    this.signUpFormToJSON = JSON.stringify(formRegister.value);
-    console.log(this.signUpFormToJSON);
+  submitForm(formMail: NgForm) {
+    this.mailFormToJSON = JSON.stringify(formMail.value);
+    this.userMail = JSON.parse(this.mailFormToJSON);
+    this._sessionStorage.store('isLogin', this.userMail);
+    console.log(this.mailFormToJSON);
   }
 
 }
