@@ -17,8 +17,8 @@ export class HomeComponent implements OnInit {
     this.signUpUser = { usermail: ''};
   }
 
-  submitForm(formHomeSignUp: NgForm) {
-    this.signUpFormToJSON = JSON.stringify(formHomeSignUp.value);
+  submitForm(formRegister: NgForm) {
+    this.signUpFormToJSON = JSON.stringify(formRegister.value);
     console.log(this.signUpFormToJSON);
   }
 
