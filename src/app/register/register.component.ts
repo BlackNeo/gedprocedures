@@ -14,9 +14,10 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
-    $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
-    $.getScript('../../assets/panel/js/sb-admin.js', function(){});
+    setTimeout(() => {
+      $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
+      $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
+      $.getScript('../../assets/panel/js/sb-admin.js', function(){});
+    }, 1000);
   }
-
 }

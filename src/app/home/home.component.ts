@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, AfterViewInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SessionStorageService } from 'ngx-webstorage';
 // declare var $: any;
@@ -11,10 +11,10 @@ import { SessionStorageService } from 'ngx-webstorage';
 export class HomeComponent implements OnInit {
 
   mailFormToJSON: string;
-  @Input() userMail: any;
+  userMail: any;
   // @Output() mailToRegister = new EventEmitter<any>();
 
-  constructor( private _sessionStorage: SessionStorageService ) { }
+  constructor( ) { }
 
   ngOnInit() {
     this.userMail = '';
