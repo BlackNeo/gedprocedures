@@ -17,7 +17,7 @@
         <form>
           <form class="form-row" #formMail="ngForm" (ngSubmit)="submitForm(formMail)">
             <div class="col-12 col-md-9 mb-2 mb-md-0">
-              <input type="email" name="username" class="form-control form-control-lg" [(ngModel)]="userMail" placeholder="Entrer votre adresse mail...">
+              <input type="email" name="email" class="form-control form-control-lg" [(ngModel)]="userMail" placeholder="Entrer votre adresse mail...">
             </div>
             <div class="col-12 col-md-3">
               <button type="submit" class="btn btn-block btn-lg btn-primary" routerLink="/s-inscrire">S'inscrire</button>
