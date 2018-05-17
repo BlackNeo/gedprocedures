@@ -108,9 +108,9 @@
     width: 100%;
 }
 
-/*
-  Bootstrap CSS
-*/
+/********************************
+********** Bootstrap CSS ********
+*********************************/
 .form-row {
   display: -ms-flexbox;
   display: flex;
