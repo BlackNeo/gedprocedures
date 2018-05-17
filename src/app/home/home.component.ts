@@ -13,14 +13,14 @@ export class HomeComponent implements OnInit {
 
   mailFormToJSON: string;
   userMail: any;
-  mailStorageBeforeRedicrect: number;
+  storageOk: boolean;
 
   constructor( private _router: Router,
                private _sessionStorage: SessionStorageService ) { }
 
   ngOnInit() {
     this.userMail = '';
-    this.mailStorageBeforeRedicrect = 0;
+    this.storageOk = false;
   }
 
   // ngAfterViewInit() {
@@ -29,19 +29,20 @@ export class HomeComponent implements OnInit {
   //   $.getScript('../../assets/panel/js/sb-admin.js', function(){});
   // }
 
-  submitForm(formMail: NgForm) {
+  submitForm( formMail: NgForm ) {
     this.mailFormToJSON = JSON.stringify(formMail.value);
     this.userMail = JSON.parse(this.mailFormToJSON);
     this.userMail = this.userMail['email'];
     this._sessionStorage.store('mail', this.userMail);
-    this.mailStorageBeforeRedicrect = 1;
+    this.storageOk = true;
     alert(this.userMail);
     console.log(this.userMail);
-    if (this.mailStorageBeforeRedicrect === 0) {
+    if ( !this.storageOk ) {
+      this.storageOk = false;
       return null;
-    } else if ( this.mailStorageBeforeRedicrect === 1) {
+    } else if ( this.storageOk ) {
       this._router.navigate(['/s-inscrire']);
-      this.mailStorageBeforeRedicrect = 0;
+      this.storageOk = false;
     }
   }
 }
