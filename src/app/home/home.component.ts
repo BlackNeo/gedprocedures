@@ -7,8 +7,7 @@ declare var $: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css',
-              '../../assets/home/vendor/bootstrap/css/bootstrap.min.css']
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
