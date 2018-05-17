@@ -30,11 +30,17 @@ export class HomeComponent implements OnInit {
   // }
 
   submitForm(formMail: NgForm) {
-    alert(formMail.value);
     this.mailFormToJSON = JSON.stringify(formMail.value);
     this.userMail = JSON.parse(this.mailFormToJSON);
+    this.userMail = this.userMail['email'];
     this._sessionStorage.store('mail', this.userMail);
     this.mailStorageBeforeRedicrect = 1;
-    console.log(formMail.value);
+    alert(this.userMail);
+    console.log(this.userMail);
+    if (this.mailStorageBeforeRedicrect === 0) {
+      return null;
+    } else if ( this.mailStorageBeforeRedicrect === 1) {
+      this.mailStorageBeforeRedicrect = 0;
+    }
   }
 }
