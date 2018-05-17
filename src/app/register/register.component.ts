@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { SessionStorageService, SessionStorage } from 'ngx-webstorage';
 declare var $: any;
 
 @Component({
@@ -8,9 +9,12 @@ declare var $: any;
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  userMail: any;
+
+  constructor( private _storage:SessionStorageService ) { }
 
   ngOnInit() {
+    this.userMail = this._storage.retrieve('email');
   }
 
   // ngAfterViewInit() {
