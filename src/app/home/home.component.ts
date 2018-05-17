@@ -40,6 +40,7 @@ export class HomeComponent implements OnInit {
     if (this.mailStorageBeforeRedicrect === 0) {
       return null;
     } else if ( this.mailStorageBeforeRedicrect === 1) {
+      this._router.navigate(['/s-inscrire']);
       this.mailStorageBeforeRedicrect = 0;
     }
   }
