@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SessionStorageService } from 'ngx-webstorage';
-import { Router, Routes } from '@angular/router';
+import { Router } from '@angular/router';
 // declare var $: any;
 
 @Component({
@@ -13,9 +13,10 @@ export class HomeComponent implements OnInit {
 
   mailFormToJSON: string;
   userMail: any;
-  // @Output() mailToRegister = new EventEmitter<any>();
+  mailStorageCheck: any;
 
-  constructor( private _router: Router ) { }
+  constructor( private _router: Router,
+               private _sessionStorage: SessionStorageService ) { }
 
   ngOnInit() {
     this.userMail = '';
@@ -28,15 +29,16 @@ export class HomeComponent implements OnInit {
   // }
 
   submitForm(formMail: NgForm) {
-    // this.mailFormToJSON = JSON.stringify(formMail.value);
-    // this.userMail = JSON.parse(this.mailFormToJSON);
-    // // this._sessionStorage.store('mail', this.userMail);
-    // this.mailToRegister.emit(this.userMail);
     alert(formMail.value);
+    this.mailFormToJSON = JSON.stringify(formMail.value);
+    this.userMail = JSON.parse(this.mailFormToJSON);
+    this._sessionStorage.store('mail', this.userMail);
+    this.mailStorageCheck = this._sessionStorage.retrieve('mail');
     console.log(formMail.value);
-    setTimeout(() => {
+
+    if (this.mailStorageCheck.length !== 0) {
       this._router.navigate(['/s-inscrire']);
-    }, 1000);
+    }
   }
 
 }
