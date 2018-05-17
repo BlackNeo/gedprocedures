@@ -36,12 +36,5 @@ export class HomeComponent implements OnInit {
     this._sessionStorage.store('mail', this.userMail);
     this.mailStorageBeforeRedicrect = 1;
     console.log(formMail.value);
-    if (this.mailStorageBeforeRedicrect === 0) {
-      return null;
-    } else if ( this.mailStorageBeforeRedicrect === 1) {
-      this._router.navigate(['/s-inscrire']);
-      this.mailStorageBeforeRedicrect = 0;
-    }
   }
-
 }
