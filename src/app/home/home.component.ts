@@ -33,12 +33,11 @@ export class HomeComponent implements OnInit {
     this.mailFormToJSON = JSON.stringify(formMail.value);
     this.userMail = JSON.parse(this.mailFormToJSON);
     this._sessionStorage.store('mail', this.userMail);
-    this.mailStorageCheck = this._sessionStorage.retrieve('mail');
     console.log(formMail.value);
+  }
 
-    if (this.mailStorageCheck.length !== 0) {
-      this._router.navigate(['/s-inscrire']);
-    }
+  onSubmit(formMail: NgForm) {
+    this._router.navigate(['/s-inscrire']);
   }
 
 }
