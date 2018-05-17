@@ -3,6 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 var Users = require('../models/users');
+var Userinfo = require('../models/userinfo');
 
 var db = "mongodb://zerosumjoke:(*yp51l0n3!*)@ds261745.mlab.com:61745/ngadminprocess";
 mongoose.Promise = global.Promise;
@@ -93,6 +94,23 @@ router.delete('/user/:id', function(req, res) {
             res.send("Error deleting user");
         } else {
             res.json(deletedUser);
+        }
+    });
+});
+
+/*-----------------------------------------------------------------------------------/
+
+/* Userinfo API*/
+
+/* Get request for all users */
+router.get('/userinfo', function(req, res) {
+    console.log('Get Access to all userinfo in DB');
+    Userinfo.find({})
+    .exec(function(err, userinfo) {
+        if(err) {
+            console.log("Error retriewing the users");
+        } else {
+            res.json(userinfo);
         }
     });
 });
