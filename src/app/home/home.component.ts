@@ -13,13 +13,14 @@ export class HomeComponent implements OnInit {
 
   mailFormToJSON: string;
   userMail: any;
-  mailStorageCheck: any;
+  mailStorageBeforeRedicrect: number;
 
   constructor( private _router: Router,
                private _sessionStorage: SessionStorageService ) { }
 
   ngOnInit() {
     this.userMail = '';
+    this.mailStorageBeforeRedicrect = 0;
   }
 
   // ngAfterViewInit() {
@@ -33,11 +34,14 @@ export class HomeComponent implements OnInit {
     this.mailFormToJSON = JSON.stringify(formMail.value);
     this.userMail = JSON.parse(this.mailFormToJSON);
     this._sessionStorage.store('mail', this.userMail);
+    this.mailStorageBeforeRedicrect = 1;
     console.log(formMail.value);
-  }
-
-  onSubmit(formMail: NgForm) {
-    this._router.navigate(['/s-inscrire']);
+    if (this.mailStorageBeforeRedicrect === 0) {
+      return null;
+    } else if ( this.mailStorageBeforeRedicrect === 1) {
+      this._router.navigate(['/s-inscrire']);
+      this.mailStorageBeforeRedicrect = 0;
+    }
   }
 
 }
