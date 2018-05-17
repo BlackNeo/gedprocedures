@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { SessionStorageService, SessionStorage } from 'ngx-webstorage';
+import { NgForm } from '@angular/forms';
 declare var $: any;
 
 @Component({
@@ -11,10 +12,14 @@ export class RegisterComponent implements OnInit {
 
   userMail: any;
 
-  constructor( private _storage:SessionStorageService ) { }
+  constructor( private _storage: SessionStorageService ) { }
 
   ngOnInit() {
     this.userMail = this._storage.retrieve('email');
+  }
+
+  submitForm( formRegister: NgForm ) {
+    alert('Get Form Register');
   }
 
   // ngAfterViewInit() {
