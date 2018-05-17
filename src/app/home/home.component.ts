@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SessionStorageService } from 'ngx-webstorage';
+import {Router} from '@angular/router';
 // declare var $: any;
 
 @Component({
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   userMail: any;
   // @Output() mailToRegister = new EventEmitter<any>();
 
-  constructor( ) { }
+  constructor( private router: Router ) { }
 
   ngOnInit() {
     this.userMail = '';
@@ -33,6 +34,7 @@ export class HomeComponent implements OnInit {
     // this.mailToRegister.emit(this.userMail);
     alert(formMail.value);
     console.log(formMail.value);
+    this.router.navigate(['/s-inscrire']);
   }
 
 }
