@@ -33,13 +33,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.mailFormToJSON = JSON.stringify(formMail.value);
     this.userMail = JSON.parse(this.mailFormToJSON);
     this.userMail = this.userMail['email'];
-    this._sessionStorage.store('mail', this.userMail);
+    this._sessionStorage.store('email', this.userMail);
+
     this.storageOk = true;
-    alert(this.userMail);
-    console.log(this.userMail);
+
     if ( !this.storageOk ) {
       this.storageOk = false;
       return null;
+
     } else if ( this.storageOk ) {
       this._router.navigate(['/s-inscrire']);
       this.storageOk = false;

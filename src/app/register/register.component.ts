@@ -8,7 +8,7 @@ declare var $: any;
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent implements OnInit, AfterViewInit {
 
   userMail: any;
 
@@ -16,17 +16,16 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.userMail = this._storage.retrieve('email');
+    console.log(this.userMail);
   }
 
   submitForm( formRegister: NgForm ) {
     alert('Get Form Register');
   }
 
-  // ngAfterViewInit() {
-  //   setTimeout(() => {
-  //     $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
-  //     $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
-  //     $.getScript('../../assets/panel/js/sb-admin.js', function(){});
-  //   }, 1000);
-  // }
+  ngAfterViewInit() {
+      $.getScript('../../../node_modules/jquery/dist/jquery.min.js', function(){});
+      $.getScript('../../assets/panel/vendor/jquery-easing/jquery.easing.min.js', function(){});
+      $.getScript('../../assets/panel/js/sb-admin.js', function(){});
+  }
 }
